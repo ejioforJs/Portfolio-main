@@ -30,7 +30,7 @@ export const projectsData = [
     description: 'A modern looking business site for a financial exchange',
     technologies: ['Next.js', 'Tailwind', 'Typescript'],
     links: {
-      preview: 'www.eloquent-exchange.com',
+      preview: 'https://www.eloquent-exchange.com/',
     },
   },
   {
