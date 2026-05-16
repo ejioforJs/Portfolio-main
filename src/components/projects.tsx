@@ -27,7 +27,7 @@ export const Projects = () => {
       >
         <SectionHeading
           heading="My Projects"
-          content="Some of the projects I have worked on. Each of them containing its own case study."
+          content="A selection of some of the projects I have worked on across web, mobile, and full-stack product development."
         />
       </motion.div>
       <div className="grid gap-7 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

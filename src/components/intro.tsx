@@ -42,7 +42,7 @@ export const Intro = () => {
       >
         Hi I&#39;m James, a{' '}
         <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
-          Fullstack
+          Full-stack
         </span>{' '}
         developer creating modern web and mobile apps.
       </motion.h1>
@@ -54,9 +54,9 @@ export const Intro = () => {
         }}
         className="text-muted-foreground max-w-xl"
       >
-        A fullstack web and mobile developer based in Nigeria. I&#39;m
+        A full-stack web and mobile developer based in Nigeria. I&#39;m
         passionate about building modern web and mobile applications using
-        Next.js, React-Js, React-Native, Nodejs, MongoDB, Tailwind CSS.
+        Next.js, React.js, React Native, Node.js, MongoDB, and Tailwind CSS.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 100 }}

@@ -4,8 +4,14 @@ export const Footer = () => {
   return (
     <footer className="text-muted-foreground my-2 text-sm">
       © {new Date().getFullYear()}{' '}
-      <Button variant="link" className="text-muted-foreground p-0 font-medium">
-        <a href="https://github.com/Skolaczk">Solomon James</a>
+      <Button
+        variant="link"
+        className="text-muted-foreground p-0 font-medium"
+        asChild
+      >
+        <a href="https://github.com/ejioforJs" target="_blank" rel="noreferrer">
+          Solomon James
+        </a>
       </Button>
       . All rights reserved.
     </footer>

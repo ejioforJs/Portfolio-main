@@ -25,96 +25,113 @@ export const links = [
 
 export const projectsData = [
   {
-    image: '/images/eloquentExchange.png',
+    image: '/images/eloquentExchange.webp',
     title: 'Eloquent Exchange',
-    description: 'A modern looking business site for a financial exchange',
-    technologies: ['Next.js', 'Tailwind', 'Typescript'],
+    description: 'A modern business site for a financial exchange platform.',
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
     links: {
       preview: 'https://www.eloquent-exchange.com/',
     },
   },
   {
-    image: '/images/fitnessSpace.png',
+    image: '/images/zeecontest.webp',
+    title: 'Zee Contest',
+    description:
+      'A contest platform for campaign discovery, participant engagement, and online competition experiences.',
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    links: {
+      preview: 'https://zeecontest.com/',
+    },
+  },
+  {
+    image: '/images/uzzina.webp',
+    title: 'Uzzina',
+    description:
+      'A modern web platform with a polished interface for product discovery and customer engagement.',
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    links: {
+      preview: 'https://uzzina.com/',
+    },
+  },
+  {
+    image: '/images/repsense.webp',
+    title: 'Repsense',
+    description:
+      'A modern landing page designed to introduce the app, communicate its value, and drive early user interest.',
+    technologies: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+    links: {
+      preview: 'https://www.repsense.site/',
+    },
+  },
+  {
+    image: '/images/fitnessSpace.webp',
     title: 'Fitness Space',
     description:
-      'A modern looking landing page for the fitness space application',
-    technologies: ['React.js', 'Nodejs'],
+      'A polished landing page for the Fitness Space web and mobile product.',
+    technologies: ['React.js', 'Node.js'],
     links: {
       preview: 'https://fitness-space-ng.netlify.app/',
     },
   },
   {
-    image: '/images/chat-app.png',
-    title: 'Talk-A-Tive Chat app',
+    image: '/images/fitness-space.webp',
+    title: 'Fitness Space Mobile App',
     description:
-      'A full-stack chat application featuring real-time communication with Socket.io, user authentication, and group chat functionalities.',
-    technologies: ['React.js', 'Chakra-ui', 'Nodejs', 'Mongodb'],
+      'A mobile fitness application for workouts, wellness tracking, and healthier lifestyle routines.',
+    technologies: ['React Native', 'Node.js', 'MongoDB'],
     links: {
-      preview: 'https://jweb-chat-app.onrender.com/',
-    },
-  },
-  {
-    image: '/images/tokyo-ecommerce.png',
-    title: 'Tokyo Ecommerce Website',
-    description:
-      'A comprehensive e-commerce platform built with React.js and Node.js.',
-    technologies: ['React.js', 'Nodejs', 'Mongodb'],
-    links: {
-      preview: 'https://tokyoecommerce.onrender.com/',
-    },
-  },
-  {
-    image: '/images/corek-project.png',
-    title: 'Corek E-learning Website',
-    description:
-      'A comprehensive e-learning platform built with React.js and Node.js.',
-    technologies: ['React.js', 'Nodejs', 'Mongodb'],
-    links: {
-      preview: 'https://corek-project.onrender.com/',
+      preview:
+        'https://play.google.com/store/apps/details?id=com.fitnessspace.app',
     },
   },
 ] as const;
 
 export const experiencesData = [
   {
-    title: 'Fullstack developer',
+    title: 'Full-stack Developer',
     company: 'Fitness Space, remote',
     description:
-      'In this role, my tasks revolved around creating frontend and backend features for the landing page site and mobile application of Fitness Space with technologies like React-native,Reactjs,Nodejs and MongoDb',
-    period: 'November 2023 - present',
-    technologies: ['React-Native', 'Reactjs', 'Nodejs', 'MongoDB'],
+      'I build frontend and backend features for the Fitness Space landing page and mobile application using React Native, React.js, Node.js, and MongoDB.',
+    period: 'November 2023 - Present',
+    technologies: ['React Native', 'React.js', 'Node.js', 'MongoDB'],
   },
   {
-    title: 'Fullstack developer',
+    title: 'Full-stack Developer',
     company: 'Eloquent Exchange, remote',
     description:
-      'In this role, i was tasked with creating a business website application for a client using technologies like Nextjs, TailwindCss, Typescript.',
-    period: 'Febuary 2025 - April 2025',
-    technologies: ['Nextjs', 'Typescript', 'Tailwind'],
+      'I created a business website for a financial exchange client using Next.js, Tailwind CSS, and TypeScript.',
+    period: 'February 2025 - April 2025',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
   },
   {
-    title: 'Fullstack developer',
+    title: 'Full-stack Developer',
     company: 'Cyberverdict, remote',
     description:
-      'In this role, i was tasked with implementing both frontend and backend features for the web application for Cyberverdict using technologies like Reactjs, TailwindCss, Typescript, Nodejs, MongoDB.',
+      'I implemented frontend and backend features for the Cyberverdict web application using React.js, Tailwind CSS, TypeScript, Node.js, and MongoDB.',
     period: 'October 2023 - June 2024',
-    technologies: ['ReactJs', 'Typescript', 'Tailwind', 'Nodejs', 'MongoDB'],
+    technologies: [
+      'React.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'Node.js',
+      'MongoDB',
+    ],
   },
   {
-    title: 'fullstack developer intern',
-    company: 'Greenie Web,Singapore(remote)',
+    title: 'Full-stack Developer Intern',
+    company: 'Greenie Web, Singapore (remote)',
     description:
-      'In this role, i was tasked with various frontend and backend tasks for the greenie web desktop software where i had to work with technologies like electronjs,Nodejs,complex regex classes,typescript',
+      'I worked on frontend and backend tasks for Greenie Web desktop software using Electron.js, Node.js, TypeScript, and advanced regular expressions.',
     period: 'August 2023 - November 2023',
-    technologies: ['Electronjs', 'TypeScript', 'Nodejs', 'regex'],
+    technologies: ['Electron.js', 'TypeScript', 'Node.js', 'Regex'],
   },
   {
-    title: 'fullstack developer',
-    company: 'Greenie Web,India(remote)',
+    title: 'Full-stack Developer',
+    company: 'Greenie Web, India (remote)',
     description:
-      'In this role which was my first, i was tasked with various frontend and backend tasks across diverse products where i had to work with technologies like Reactjs,Nodejs,Mongodb',
+      'In my first developer role, I contributed frontend and backend features across several products using React.js, Node.js, and MongoDB.',
     period: 'June 2023 - August 2023',
-    technologies: ['Reactjs', 'Nodejs', 'MongoDB'],
+    technologies: ['React.js', 'Node.js', 'MongoDB'],
   },
 ] as const;
 

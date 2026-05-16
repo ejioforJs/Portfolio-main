@@ -4,7 +4,9 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { toast } from 'sonner';
 
+import { sendEmailAction } from '@/actions/send-email';
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
@@ -16,8 +18,22 @@ export const Contact = () => {
   const { ref } = useSectionInView('Contact');
   const {
     register,
-    formState: { errors },
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
   } = useForm<TFormSchema>({ resolver: zodResolver(formSchema) });
+
+  const onSubmit = async (values: TFormSchema) => {
+    const result = await sendEmailAction(values);
+
+    if (result.error) {
+      toast.error(result.error);
+      return;
+    }
+
+    toast.success(result.data);
+    reset();
+  };
 
   return (
     <motion.section
@@ -56,8 +72,8 @@ export const Contact = () => {
         }
       />
       <form
-        action="https://getform.io/f/9b513e6e-f87f-40de-b6d0-1e01569bde37"
-        method="POST"
+        noValidate
+        onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col items-center gap-5"
       >
         <div className="w-full max-w-xl">
@@ -74,6 +90,9 @@ export const Contact = () => {
             type="email"
             id="email"
             placeholder="hello@gmail.com"
+            autoComplete="email"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email?.message ? 'email-error' : undefined}
             {...register('email')}
             className={cn(
               'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-10 w-full rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
@@ -81,7 +100,7 @@ export const Contact = () => {
             )}
           />
           {errors.email?.message && (
-            <p className="text-destructive mt-1 text-sm">
+            <p id="email-error" className="text-destructive mt-1 text-sm">
               {errors.email?.message}
             </p>
           )}
@@ -99,6 +118,10 @@ export const Contact = () => {
           <textarea
             id="message"
             placeholder="Hello! What's up?"
+            aria-invalid={!!errors.message}
+            aria-describedby={
+              errors.message?.message ? 'message-error' : undefined
+            }
             {...register('message')}
             className={cn(
               'border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-60 w-full resize-none rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
@@ -106,13 +129,14 @@ export const Contact = () => {
             )}
           ></textarea>
           {errors.message?.message && (
-            <p className="text-destructive mt-1 text-sm">
+            <p id="message-error" className="text-destructive mt-1 text-sm">
               {errors.message?.message}
             </p>
           )}
         </div>
-        <Button size="lg">
-          Submit <Icons.arrowRight className="ml-2 size-4" />
+        <Button size="lg" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Submit'}
+          <Icons.arrowRight className="ml-2 size-4" />
         </Button>
       </form>
     </motion.section>

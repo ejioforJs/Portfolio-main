@@ -21,22 +21,22 @@ export const About = () => {
       <SectionHeading heading="About Me" />
       <div className="-mt-5 max-w-2xl text-center leading-7">
         <p className="mb-4">
-          I&apos;m Solomon James, I&apos;m a Fullstack developer from Nigeria.
-          I&apos;ve been coding for the past 5 years with experience across
-          various industries. After I gained admission into college , I decided
-          to pursue my passion for programming. My favorite part of programming
-          is the problem-solving aspect. I love the feeling of finally figuring
-          out a solution to a problem. I&apos;ve had the opportunity to work on
+          I&apos;m Solomon James, a full-stack developer from Nigeria. I&apos;ve
+          been coding for the past 5 years, with experience across different
+          industries. After I gained admission into college, I decided to pursue
+          my passion for programming. My favorite part of programming is the
+          problem-solving aspect. I love the feeling of finally figuring out a
+          solution to a problem. I&apos;ve had the opportunity to work on
           several exciting projects during my coding journey, ranging from
-          personal projects to collaborative ventures. My core stack is
-          React,React-Native, Next.js, TypeScript, Nodejs, MongoDB and Tailwind
-          CSS. I am also familiar with Nest.js and Prisma. I&apos;m always
-          looking to learn new technologies.
+          personal projects to collaborative ventures. My core stack is React,
+          React Native, Next.js, TypeScript, Node.js, MongoDB, and Tailwind CSS.
+          I am also familiar with Nest.js and Prisma. I&apos;m always looking to
+          learn new technologies.
         </p>
         <p>
-          I&apos;m open to Job opportunities where I can contribute, learn and
+          I&apos;m open to job opportunities where I can contribute, learn, and
           grow. If you have a good opportunity that matches my skills and
-          experience then don&apos;t hesitate to contact me.
+          experience, don&apos;t hesitate to contact me.
         </p>
       </div>
       <Skills />

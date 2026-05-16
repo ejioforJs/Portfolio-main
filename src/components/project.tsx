@@ -39,20 +39,20 @@ export const Project = ({ project, index }: TProps) => {
         once: true,
       }}
       custom={index}
-      className="flex flex-col rounded border p-5"
+      className="flex h-full flex-col rounded border p-5"
     >
       <Link
         href={links.preview}
         aria-label={title}
         target="_blank"
-        className="overflow-hidden rounded"
+        className="bg-muted relative block aspect-[16/10] overflow-hidden rounded"
       >
         <Image
           src={image}
           alt={title}
-          height={390}
-          width={600}
-          className="rounded transition-transform hover:scale-105"
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="object-cover transition-transform hover:scale-105"
         />
       </Link>
       <h3 className="mt-3 text-xl font-medium">{title}</h3>
